@@ -19,9 +19,8 @@ ENV PATH="/root/.local/bin:$PATH"
 # 复制依赖文件
 COPY pyproject.toml ./
 
-# 安装 Python 依赖 (开发依赖)
-RUN uv sync --frozen --no-install-project && \
-    uv pip install pytest pytest-asyncio pytest-cov
+# 生成 lockfile 并安装依赖
+RUN uv lock && uv sync
 
 # 复制源代码
 COPY src/ ./src/
