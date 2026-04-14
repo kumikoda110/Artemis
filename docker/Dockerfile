@@ -19,15 +19,13 @@ ENV PATH="/root/.local/bin:$PATH"
 # 复制依赖文件
 COPY pyproject.toml ./
 
-# 安装 Python 依赖
-RUN uv sync
+# 安装 Python 依赖 (开发依赖)
+RUN uv sync --frozen --no-install-project && \
+    uv pip install pytest pytest-asyncio pytest-cov
 
 # 复制源代码
 COPY src/ ./src/
 COPY tests/ ./tests/
 
-# 安装 uvloop (高性能异步)
-RUN uv pip install uvloop
-
 # 默认命令: 运行所有测试
-CMD ["pytest", "tests/", "-v", "--tb=short"]
+CMD ["python", "-m", "pytest", "tests/", "-v", "--tb=short"]
