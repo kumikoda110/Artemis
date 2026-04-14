@@ -1,5 +1,5 @@
-# OpenClaw Python 重写 - 测试镜像
-# 使用 podman 构建: podman build -t openclaw-test .
+# Artemis - 测试镜像
+# 使用 podman 构建: podman build -t artemis-test -f docker/Dockerfile .
 
 FROM python:3.12-slim
 

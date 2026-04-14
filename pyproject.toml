@@ -1,7 +1,7 @@
 [project]
-name = "openclaw-rewrite"
+name = "artemis"
 version = "0.1.0"
-description = "OpenClaw Python 重写 - AI 助手框架"
+description = "Artemis - AI 助手框架 (OpenClaw Python 重写)"
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
@@ -13,7 +13,6 @@ dependencies = [
     "aiosqlite>=0.19.0",
     "sqlalchemy>=2.0.0",
     "httpx>=0.25.0",
-    "redis>=5.0.0",
     "python-dotenv>=1.0.0",
     "structlog>=23.0.0",
 ]
