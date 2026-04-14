@@ -1,7 +1,7 @@
 # Artemis - 测试镜像
 # 使用 podman 构建: podman build -t artemis-test -f docker/Dockerfile .
 
-FROM python:3.12-slim
+FROM 192.168.1.3:8088/artemis/docker.xuanyuan.run/library/python:latest
 
 # 设置工作目录
 WORKDIR /app
