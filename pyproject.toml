@@ -17,20 +17,10 @@ dependencies = [
     "structlog>=23.0.0",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "pytest>=7.4.0",
-    "pytest-asyncio>=0.21.0",
-    "pytest-cov>=4.1.0",
-    "mypy>=1.5.0",
-    "ruff>=0.1.0",
-    "pyright>=1.1.0",
-]
-
-[tool.uv]
-dev-dependencies = [
-    "pytest>=7.4.0",
-    "pytest-asyncio>=0.21.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio",
     "pytest-cov>=4.1.0",
     "mypy>=1.5.0",
     "ruff>=0.1.0",
